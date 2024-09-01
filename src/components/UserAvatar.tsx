@@ -6,9 +6,9 @@ export const MarqueePhoto = () => {
   );
 };
 
-const UserAvatar = () => {
+const UserAvatar = ({ className }: { className?: string }) => {
   return (
-    <Avatar>
+    <Avatar className={className}>
       <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
       <AvatarFallback>CN</AvatarFallback>
     </Avatar>

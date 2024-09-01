@@ -21,14 +21,32 @@ const MockIndies = [
   {
     username: "@Tarzan",
     name: "Tarzan Micheal",
+    tag_line: "Indie game dev specialized in unity and c# programming",
+    skills: ["unity", "c#"],
+    tools: ["unity", "c#"],
+    badges: ["unity", "c#"],
+    origin_story: "unity",
+    links: ["unity", "c#"],
   },
   {
     username: "@Winifred",
     name: "Winifred Micheal",
+    tag_line: "Indie game dev specialized in unity and c# programming",
+    skills: ["unity", "c#"],
+    tools: ["unity", "c#"],
+    badges: ["unity", "c#"],
+    origin_story: "unity",
+    links: ["unity", "c#"],
   },
   {
     username: "@Sonia",
     name: "Sonia Micheal",
+    tag_line: "Indie game dev specialized in unity and c# programming",
+    skills: ["unity", "c#"],
+    tools: ["unity", "c#"],
+    badges: ["unity", "c#"],
+    origin_story: "unity",
+    links: ["unity", "c#"],
   },
 ];
 
@@ -103,9 +121,7 @@ function IndieCard({ onClick, indie }: { onClick: () => void; indie: Indie }) {
           <UserAvatar />
           <div className="">
             <p className="">{name}</p>
-            <p className="hidden text-sm md:block">
-              Indie game dev specialized in unity and c# programming
-            </p>
+            <p className="hidden text-sm md:block"></p>
             <div className="flex items-center pt-1">
               <p className="text-sm">{username}</p>
               <div className="mx-1 h-4 border-l bg-white" />

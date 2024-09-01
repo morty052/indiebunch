@@ -1,3 +1,5 @@
+import Layout from "@/components/ui/layout";
+import CreateService from "@/pages/create-service/CreateService";
 import LandingPage from "@/pages/landingpage/LandingPage";
 import Workspace from "@/pages/workspace/Workspace";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -5,11 +7,23 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <LandingPage />,
+    element: (
+      <Layout>
+        <LandingPage />
+      </Layout>
+    ),
   },
   {
     path: "/workspace/*",
     element: <Workspace />,
+  },
+  {
+    path: "/create/service/*",
+    element: (
+      <Layout>
+        <CreateService />
+      </Layout>
+    ),
   },
 ]);
 
