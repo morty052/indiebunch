@@ -1,5 +1,7 @@
+import Tag from "@/components/Tag";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { Routes, Route } from "react-router-dom";
 
 function Header() {
   return (
@@ -13,6 +15,18 @@ function Header() {
         </div>
       </div>
     </nav>
+  );
+}
+
+const tags = ["unity", "c#"];
+
+function SuggestedTags() {
+  return (
+    <div className="flex flex-wrap gap-2">
+      {tags.map((tag) => (
+        <Tag key={tag} title={tag} />
+      ))}
+    </div>
   );
 }
 
@@ -32,6 +46,7 @@ function NewServiceForm() {
             <p>Get started</p>
           </Button>
         </div>
+        <SuggestedTags />
       </form>
     </div>
   );
@@ -41,7 +56,9 @@ const CreateService = () => {
   return (
     <div className="space-y-6">
       <Header />
-      <NewServiceForm />
+      <Routes>
+        <Route path="/" element={<NewServiceForm />} />
+      </Routes>
     </div>
   );
 };
