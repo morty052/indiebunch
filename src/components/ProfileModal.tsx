@@ -88,7 +88,7 @@ function ProfileDetails({
 function LargeIndieCard({ indie }: { indie: Indie | null }) {
   const { name, tools, skills, links } = indie ?? {};
   return (
-    <div className="flex max-w-lg flex-col items-center space-y-2 rounded-2xl p-2 md:border md:p-4">
+    <div className="flex max-h-[800px] max-w-lg flex-col items-center space-y-2 rounded-2xl p-2 md:border md:p-4">
       <UserAvatar className="h-28 w-28 md:h-32 md:w-32" />
       <div className="flex flex-col space-y-1">
         <p className="text-lg font-semibold md:text-2xl">{name}</p>
@@ -123,7 +123,12 @@ function ProfileTabs() {
         <TabsTrigger value="services">Services</TabsTrigger>
       </TabsList>
       <TabsContent value="projects">
-        <div className="max-h-[500px] w-full space-y-6 overflow-y-scroll">
+        <div className="max-h-screen w-full space-y-6 overflow-y-scroll xl:max-h-[500px]">
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
+          <ProjectCard />
           <ProjectCard />
           <ProjectCard />
           <ProjectCard />
@@ -152,12 +157,12 @@ function ProfileModal({
       <SheetTrigger asChild>
         <Button className="hidden" ref={buttonRef} variant="outline" />
       </SheetTrigger>
-      <SheetContent className="flex min-w-max justify-end bg-dark text-light">
-        <div className="w-full max-w-screen-lg">
-          <div className="grid gap-4 py-4 md:grid-cols-3 md:gap-x-8">
+      <SheetContent className="flex min-w-full justify-end bg-dark text-light xl:min-w-max">
+        <div className="w-full xl:max-w-screen-lg">
+          <div className="grid gap-4 py-4 md:grid-cols-3 xl:gap-x-8">
             <LargeIndieCard indie={indie} />
             <div className="col-span-2 hidden space-y-3 md:block">
-              <strong className="text-2xl xl:text-3xl">{tag_line}</strong>
+              <strong className="text-2xl lg:text-3xl">{tag_line}</strong>
               <ProfileTabs />
             </div>
           </div>

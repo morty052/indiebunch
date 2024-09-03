@@ -52,9 +52,9 @@ const MockIndies = [
 
 function SuggestionItem({ title, icon }: { title: string; icon: string }) {
   return (
-    <Button className="bg-light group h-8 space-x-2 rounded-2xl hover:bg-purple-300">
+    <Button className="group h-8 space-x-2 rounded-2xl bg-light hover:bg-purple-300">
       <img className="h-4 w-4 object-contain md:h-6 md:w-6" src={icon} alt="" />
-      <p className="text-dark text-sm group-hover:text-white">{title}</p>
+      <p className="text-sm text-dark group-hover:text-white">{title}</p>
     </Button>
   );
 }
@@ -62,7 +62,7 @@ function SuggestionItem({ title, icon }: { title: string; icon: string }) {
 function SuggestedSearches() {
   return (
     <div className="flex w-full items-center gap-2">
-      <p className="text-light hidden text-sm md:block">Suggestions:</p>
+      <p className="hidden text-sm text-light md:block">Suggestions:</p>
       <div className="flex flex-wrap gap-2 md:max-w-none">
         {suggestions.map((suggestion, index) => (
           <SuggestionItem
@@ -113,7 +113,7 @@ function IndieCard({ onClick, indie }: { onClick: () => void; indie: Indie }) {
   return (
     <div
       onClick={onClick}
-      className="text-light border-light/30 flex cursor-pointer flex-col gap-4 border-b pb-3 hover:bg-muted-foreground md:flex-row md:p-3"
+      className="flex cursor-pointer flex-col gap-4 border-b border-light/30 pb-3 text-light hover:bg-muted-foreground md:flex-row md:p-3"
     >
       <MarqueePhoto />
       <div className="flex-1 space-y-2">
@@ -152,7 +152,7 @@ const Discover = () => {
   );
 
   return (
-    <div>
+    <div className="p-2 md:p-6">
       <SearchBar />
       <div className="space-y-3 overflow-scroll py-6">
         {MockIndies.map((indie, index) => (

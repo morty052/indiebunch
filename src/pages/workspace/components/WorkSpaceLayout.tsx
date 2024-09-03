@@ -60,9 +60,9 @@ function WorkSpaceLayout({ children }: { children: ReactNode }) {
     <div className="min-h-screen bg-neutral-900">
       <div className="mx-auto grid w-full max-w-screen-2xl bg-neutral-900">
         <WorkSpaceSideBar />
-        <div className="flex flex-col md:ml-[220px] lg:ml-[280px]">
+        <div className="flex flex-col md:ml-[80px] xl:ml-[280px]">
           <Header />
-          <main className="flex h-screen flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6">
+          <main className="flex h-screen flex-1 flex-col gap-4 lg:gap-6">
             {children}
           </main>
         </div>

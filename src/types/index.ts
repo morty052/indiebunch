@@ -8,3 +8,7 @@ export type Indie = {
   origin_story: string;
   links: string[];
 };
+
+export type Tag = {
+  name: string;
+};

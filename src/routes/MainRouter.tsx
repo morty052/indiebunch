@@ -25,6 +25,14 @@ const router = createBrowserRouter([
       </Layout>
     ),
   },
+  {
+    path: "/create/project/*",
+    element: (
+      <Layout>
+        <CreateService />
+      </Layout>
+    ),
+  },
 ]);
 
 function MainRouter() {
